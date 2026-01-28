@@ -143,7 +143,7 @@ function DiceTableFallback() {
 export function DiceScene(props: DiceSceneProps) {
   return (
     <div
-      className="relative w-full min-h-[400px] rounded-xl overflow-hidden bg-zinc-900"
+      className="relative w-full min-h-[280px] rounded-xl overflow-hidden bg-zinc-900 sm:min-h-[360px] lg:min-h-[400px]"
       style={{ aspectRatio: "4/3" }}
     >
       <Canvas

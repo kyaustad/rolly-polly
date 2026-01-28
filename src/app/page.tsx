@@ -60,17 +60,17 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-linear-to-b from-amber-950/30 via-stone-950 to-stone-950 text-stone-100">
-      <div className="mx-auto max-w-lg px-6 py-16">
-        <header className="text-center mb-12">
-          <h1 className="text-4xl font-bold tracking-tight text-amber-200/95 drop-shadow-sm">
+      <div className="mx-auto max-w-lg px-4 py-8 sm:px-6 sm:py-16">
+        <header className="text-center mb-8 sm:mb-12">
+          <h1 className="text-3xl font-bold tracking-tight text-amber-200/95 drop-shadow-sm sm:text-4xl">
             Rolly Polly
           </h1>
-          <p className="mt-2 text-stone-400">
+          <p className="mt-2 text-sm text-stone-400 sm:text-base">
             Multiplayer d6 dice for Scum & Villainy and other TTRPGs
           </p>
         </header>
 
-        <div className="space-y-6 rounded-2xl border border-amber-900/40 bg-stone-900/60 p-6 shadow-xl">
+        <div className="space-y-6 rounded-2xl border border-amber-900/40 bg-stone-900/60 p-4 shadow-xl sm:p-6">
           <div>
             <label className="block text-sm font-medium text-amber-200/80 mb-1">
               Your name
@@ -80,16 +80,16 @@ export default function Home() {
               value={playerName}
               onChange={(e) => setPlayerName(e.target.value)}
               placeholder="Captain or crew name"
-              className="w-full rounded-lg border border-stone-600 bg-stone-800/80 px-4 py-2.5 text-stone-100 placeholder-stone-500 focus:border-amber-500 focus:outline-none focus:ring-1 focus:ring-amber-500"
+              className="min-h-[48px] w-full touch-manipulation rounded-lg border border-stone-600 bg-stone-800/80 px-4 py-2.5 text-base text-stone-100 placeholder-stone-500 focus:border-amber-500 focus:outline-none focus:ring-1 focus:ring-amber-500 sm:min-h-0"
             />
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-3 sm:grid-cols-2 sm:gap-4">
             <button
               type="button"
               onClick={handleCreate}
               disabled={creating}
-              className="rounded-xl border border-amber-600/60 bg-amber-800/40 px-4 py-3 font-medium text-amber-100 transition hover:bg-amber-700/50 disabled:opacity-60"
+              className="min-h-[48px] touch-manipulation rounded-xl border border-amber-600/60 bg-amber-800/40 px-4 py-3 font-medium text-amber-100 transition active:bg-amber-700/50 hover:bg-amber-700/50 disabled:opacity-60 sm:min-h-0"
             >
               {creating ? "Creating…" : "Create game"}
             </button>
@@ -97,7 +97,7 @@ export default function Home() {
               type="button"
               onClick={handleJoin}
               disabled={joining}
-              className="rounded-xl border border-stone-600 bg-stone-800/60 px-4 py-3 font-medium text-stone-200 transition hover:bg-stone-700/60 disabled:opacity-60"
+              className="min-h-[48px] touch-manipulation rounded-xl border border-stone-600 bg-stone-800/60 px-4 py-3 font-medium text-stone-200 transition active:bg-stone-700/60 hover:bg-stone-700/60 disabled:opacity-60 sm:min-h-0"
             >
               {joining ? "Joining…" : "Join game"}
             </button>
@@ -119,13 +119,13 @@ export default function Home() {
               onChange={(e) => setJoinCode(e.target.value.toUpperCase())}
               placeholder="Room code"
               maxLength={6}
-              className="flex-1 rounded-lg border border-stone-600 bg-stone-800/80 px-4 py-2.5 text-stone-100 placeholder-stone-500 focus:border-amber-500 focus:outline-none focus:ring-1 focus:ring-amber-500 uppercase"
+              className="min-h-[48px] flex-1 touch-manipulation rounded-lg border border-stone-600 bg-stone-800/80 px-4 py-2.5 text-base text-stone-100 placeholder-stone-500 focus:border-amber-500 focus:outline-none focus:ring-1 focus:ring-amber-500 uppercase sm:min-h-0"
             />
             <button
               type="button"
               onClick={handleJoin}
               disabled={joining || !joinCode.trim()}
-              className="rounded-lg bg-amber-700/60 px-4 py-2.5 font-medium text-amber-100 hover:bg-amber-600/60 disabled:opacity-50"
+              className="min-h-[48px] touch-manipulation shrink-0 rounded-lg bg-amber-700/60 px-4 py-2.5 font-medium text-amber-100 active:bg-amber-600/60 hover:bg-amber-600/60 disabled:opacity-50 sm:min-h-0"
             >
               Join
             </button>
@@ -138,7 +138,7 @@ export default function Home() {
           )}
         </div>
 
-        <p className="mt-8 text-center text-sm text-stone-500">
+        <p className="mt-6 text-center text-sm text-stone-500 sm:mt-8">
           Roll 1–6 d6s together. Perfect for Forged in the Dark–style pools.
         </p>
       </div>
