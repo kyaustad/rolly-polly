@@ -5,12 +5,12 @@ import { useFrame } from "@react-three/fiber";
 // @ts-expect-error three has no bundled types
 import * as THREE from "three";
 
-/** Face layout for Dice.obj: which local axis shows which value. (1 up = +Y; 4↔6 and 3↔5 corrected from model.) */
+/** Face layout for Dice.obj: which local axis shows which value. (1 up = +Y; 2↔3 on ±Z.) */
 const LOCAL_NORMALS: [THREE.Vector3, number][] = [
   [new THREE.Vector3(0, 1, 0), 1],
   [new THREE.Vector3(0, -1, 0), 4],
-  [new THREE.Vector3(0, 0, 1), 2],
-  [new THREE.Vector3(0, 0, -1), 3],
+  [new THREE.Vector3(0, 0, 1), 3],
+  [new THREE.Vector3(0, 0, -1), 2],
   [new THREE.Vector3(1, 0, 0), 5],
   [new THREE.Vector3(-1, 0, 0), 6],
 ];
