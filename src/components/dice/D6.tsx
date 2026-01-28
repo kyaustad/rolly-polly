@@ -5,14 +5,14 @@ import { useFrame } from "@react-three/fiber";
 // @ts-expect-error three has no bundled types
 import * as THREE from "three";
 
-/** Face layout for Dice.obj: 1 is the “up” face in the model’s default orientation (+Y). */
+/** Face layout for Dice.obj: which local axis shows which value. (1 up = +Y; 4↔6 and 3↔5 corrected from model.) */
 const LOCAL_NORMALS: [THREE.Vector3, number][] = [
   [new THREE.Vector3(0, 1, 0), 1],
-  [new THREE.Vector3(0, -1, 0), 6],
+  [new THREE.Vector3(0, -1, 0), 4],
   [new THREE.Vector3(0, 0, 1), 2],
-  [new THREE.Vector3(0, 0, -1), 5],
-  [new THREE.Vector3(1, 0, 0), 3],
-  [new THREE.Vector3(-1, 0, 0), 4],
+  [new THREE.Vector3(0, 0, -1), 3],
+  [new THREE.Vector3(1, 0, 0), 5],
+  [new THREE.Vector3(-1, 0, 0), 6],
 ];
 
 const WORLD_UP = new THREE.Vector3(0, 1, 0);
