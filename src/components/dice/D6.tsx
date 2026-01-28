@@ -5,9 +5,10 @@ import { useFrame } from "@react-three/fiber";
 // @ts-expect-error three has no bundled types
 import * as THREE from "three";
 
+/** Face layout for Dice.obj: 1 is the “up” face in the model’s default orientation (+Y). */
 const LOCAL_NORMALS: [THREE.Vector3, number][] = [
-  [new THREE.Vector3(0, 1, 0), 6],
-  [new THREE.Vector3(0, -1, 0), 1],
+  [new THREE.Vector3(0, 1, 0), 1],
+  [new THREE.Vector3(0, -1, 0), 6],
   [new THREE.Vector3(0, 0, 1), 2],
   [new THREE.Vector3(0, 0, -1), 5],
   [new THREE.Vector3(1, 0, 0), 3],
