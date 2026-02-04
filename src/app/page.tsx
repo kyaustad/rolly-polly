@@ -79,7 +79,7 @@ export default function Home() {
               type="text"
               value={playerName}
               onChange={(e) => setPlayerName(e.target.value)}
-              placeholder="Captain or crew name"
+              placeholder="You'll be called this"
               className="min-h-[48px] w-full touch-manipulation rounded-lg border border-stone-600 bg-stone-800/80 px-4 py-2.5 text-base text-stone-100 placeholder-stone-500 focus:border-amber-500 focus:outline-none focus:ring-1 focus:ring-amber-500 sm:min-h-0"
             />
           </div>
